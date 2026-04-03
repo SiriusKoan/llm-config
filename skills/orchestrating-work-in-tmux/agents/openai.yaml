@@ -1,0 +1,4 @@
+interface:
+  display_name: "Orchestrating Work in tmux"
+  short_description: "Organize visible tmux workspaces"
+  default_prompt: "Use $orchestrating-work-in-tmux to organize tmux windows and panes across local or SSH contexts, and run important commands inside the tmux session so the work stays visible there."
