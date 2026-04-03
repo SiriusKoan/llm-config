@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "excalidraw": {
+      "type": "sse",
+      "url": "https://mcp.excalidraw.com"
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"]
+    },
+    "tmux": {
+      "command": "npx",
+      "args": ["-y", "tmux-mcp", "--shell-type=fish"]
+    }
+  }
+}
