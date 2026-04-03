@@ -1,0 +1,15 @@
+[submodule "superpowers"]
+	path = superpowers
+	url = https://github.com/obra/superpowers.git
+[submodule "academic-research-skills"]
+	path = academic-research-skills
+	url = https://github.com/Imbad0202/academic-research-skills.git
+[submodule "awesome-codex-subagents"]
+	path = awesome-codex-subagents
+	url = https://github.com/VoltAgent/awesome-codex-subagents.git
+[submodule "anthropics-skills"]
+	path = anthropics-skills
+	url = https://github.com/anthropics/skills.git
+[submodule "everything-claude-code"]
+	path = everything-claude-code
+	url = https://github.com/affaan-m/everything-claude-code.git
