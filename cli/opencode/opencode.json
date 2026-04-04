@@ -1,0 +1,31 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugin": [
+    "opencode-gemini-auth@latest",
+    "opencode-antigravity-auth@latest",
+    "oh-my-opencode@latest"
+  ],
+  "mcp": {
+    "playwright": {
+      "type": "local",
+      "command": [
+        "npx",
+        "@playwright/mcp@latest"
+      ],
+      "enabled": true
+    },
+    "excalidraw": {
+      "type": "remote",
+      "url": "https://mcp.excalidraw.com"
+    },
+    "tmux": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "tmux-mcp",
+        "--shell-type=fish"
+      ]
+    }
+  }
+}
