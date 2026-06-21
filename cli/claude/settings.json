@@ -1,4 +1,15 @@
 {
+  "permissions": {
+    "defaultMode": "auto"
+  },
+  "enabledPlugins": {
+    "pyright-lsp@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": true
+  },
+  "effortLevel": "xhigh",
+  "theme": "dark",
+  "skipAutoPermissionPrompt": true,
+  "skipWorkflowUsageWarning": true,
   "mcpServers": {
     "excalidraw": {
       "type": "sse",
@@ -12,5 +23,31 @@
       "command": "npx",
       "args": ["-y", "tmux-mcp", "--shell-type=fish"]
     }
+  },
+  "hooks": {
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/siriuskoan/.claude/hooks/notify.sh claude",
+            "async": true,
+            "timeout": 15
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/siriuskoan/.claude/hooks/notify.sh claude",
+            "async": true,
+            "timeout": 15
+          }
+        ]
+      }
+    ]
   }
 }
