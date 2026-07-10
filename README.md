@@ -5,7 +5,6 @@ Collection of LLM resources, skills, agents, and tools.
 ## Submodules
 
 - `academic-research-skills`
-- `anthropics-skills`
 - `awesome-codex-subagents`
 - `caveman`
 - `everything-claude-code`
