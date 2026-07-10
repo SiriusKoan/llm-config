@@ -1,12 +1,11 @@
 # LLM Config
 
-Collection of LLM resources, skills, agents, and tools.
+Collection of LLM resources, skills, and tools.
 
 ## Submodules
 
 - `academic-research-skills`
 - `andrej-karpathy-skills`
-- `awesome-codex-subagents`
 - `caveman`
 - `everything-claude-code`
 - `superpowers`
@@ -23,14 +22,14 @@ git submodule update --init --recursive
 
 ```bash
 # Claude (~/.claude)
-ln -s $(pwd)/cli/claude/{settings.json,agents,skills,hooks} ~/.claude/
+ln -s $(pwd)/cli/claude/{settings.json,skills,hooks} ~/.claude/
 
 # OpenCode (~/.config/opencode)
 ln -s $(pwd)/cli/opencode/opencode.json ~/.config/opencode/config.json
-ln -s $(pwd)/cli/opencode/{agent,skill} ~/.config/opencode/
+ln -s $(pwd)/cli/opencode/skill ~/.config/opencode/
 
 # Codex (~/.codex)
-ln -s $(pwd)/cli/codex/{agents,hooks} ~/.codex/
+ln -s $(pwd)/cli/codex/hooks ~/.codex/
 ```
 
 ## Notifications (Telegram)
