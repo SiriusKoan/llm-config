@@ -2,13 +2,16 @@
 
 Collection of LLM resources, skills, and tools.
 
-## Submodules
+## Skill Sources
+
+Five submodules, plus one directory of hand-written skills:
 
 - `academic-research-skills`
 - `andrej-karpathy-skills`
 - `caveman`
 - `everything-claude-code`
 - `superpowers`
+- `personal-skills` — not a submodule; own skills live here
 
 ## Setup
 
@@ -17,6 +20,19 @@ git clone https://github.com/siriuskoan/llm-config.git
 cd llm-config
 git submodule update --init --recursive
 ```
+
+## Selecting Skills
+
+`skills/` is a flat directory of symlinks into the sources above, and is what every
+CLI's skill directory points at. Pick which ones are linked:
+
+```bash
+uv run scripts/skills.py            # keys are listed on screen
+uv run scripts/skills.py --dry-run  # show the diff, change nothing
+```
+
+It edits `skills/` in place — review with `git status` and commit. Skills of your own
+go in `personal-skills/<name>/SKILL.md`.
 
 ## CLI Configuration
 
