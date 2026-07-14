@@ -1,2 +1,6 @@
 __pycache__/
 *.pyc
+
+# skills/ is built by scripts/skills.py — which skills are linked is a local choice
+skills/*
+!skills/.gitkeep
