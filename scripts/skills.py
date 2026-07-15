@@ -37,8 +37,12 @@ SOURCE_ROOTS = {
     "caveman": "caveman/skills",
     "andrej-karpathy-skills": "andrej-karpathy-skills/skills",
     "academic-research-skills": "academic-research-skills",
+    "mattpocock-skills": "mattpocock-skills/skills",
+    "context-engineering-kit": "context-engineering-kit/plugins",
     "personal-skills": "personal-skills",
 }
+
+NESTED_SOURCES = {"mattpocock-skills", "context-engineering-kit"}
 
 HELP = (
     "↑↓ move · ←→ pan · space toggle · tab fold (shift-tab: all)"
@@ -95,26 +99,43 @@ def occupied(path: Path) -> bool:
 class Skill:
     source: str
     name: str
+    path: str
     description: str
 
     @property
     def target(self) -> str:
         """Symlink target, relative to skills/."""
-        return f"../{SOURCE_ROOTS[self.source]}/{self.name}"
+        return f"../{SOURCE_ROOTS[self.source]}/{self.path}"
 
     def is_linked(self, current: dict[str, str]) -> bool:
         return current.get(self.name) == self.target
 
     @classmethod
     def scan(cls, root: Path, sources: set[str]) -> list[Skill]:
-        """Every skill on offer: an immediate subdir of a source root holding a SKILL.md."""
-        return [
-            cls(source, d.name, describe(d / "SKILL.md"))
-            for source, rel in SOURCE_ROOTS.items()
-            if source in sources
-            for d in sorted((root / rel).iterdir())
-            if d.is_dir() and (d / "SKILL.md").is_file()
-        ]
+        """Every skill on offer, using recursive scanning for nested sources."""
+        scanned: list[Skill] = []
+        for source, rel in SOURCE_ROOTS.items():
+            if source not in sources:
+                continue
+            source_root = root / rel
+            if source in NESTED_SOURCES:
+                skill_files = sorted(source_root.rglob("SKILL.md"))
+            else:
+                skill_files = sorted(
+                    skill_md
+                    for skill_md in source_root.glob("*/SKILL.md")
+                    if skill_md.is_file()
+                )
+            scanned.extend(
+                cls(
+                    source,
+                    skill_md.parent.name,
+                    skill_md.parent.relative_to(source_root).as_posix(),
+                    describe(skill_md),
+                )
+                for skill_md in skill_files
+            )
+        return scanned
 
     @staticmethod
     def linked(skills_dir: Path) -> dict[str, str]:

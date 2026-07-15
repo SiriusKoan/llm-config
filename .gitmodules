@@ -13,3 +13,10 @@
 [submodule "andrej-karpathy-skills"]
 	path = andrej-karpathy-skills
 	url = https://github.com/multica-ai/andrej-karpathy-skills.git
+[submodule "mattpocock-skills"]
+	path = mattpocock-skills
+	url = https://github.com/mattpocock/skills.git
+[submodule "context-engineering-kit"]
+	path = context-engineering-kit
+	url = https://github.com/NeoLabHQ/context-engineering-kit.git
+	branch = master
