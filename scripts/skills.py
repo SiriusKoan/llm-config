@@ -8,7 +8,7 @@
     uv run scripts/skills.py [--dry-run]
 
 skills/ is a flat directory of symlinks, and is what every CLI's skill directory points
-at. This edits it in place; committing the result is up to you.
+at. It is gitignored, so this just edits it in place — there is nothing to commit.
 """
 
 from __future__ import annotations
@@ -247,18 +247,14 @@ class Picker:
     def window(self, text: str, width: int) -> str:
         """The slice of a row visible at the current pan offset.
 
-        Measured in terminal cells, not characters: CJK descriptions are double-width and
-        would otherwise overflow the right edge.
+        Walked a cell at a time, not a character at a time: CJK descriptions are
+        double-width and would otherwise overflow the right edge. A leading … marks text
+        panned off the left, a trailing … marks text running off the right.
         """
-        head = "…" if self.offset else ""
-        budget = width - get_cwidth(head)
+        lead = "…" if self.offset else ""
+        budget = width - get_cwidth(lead)
         if budget <= 0:  # a terminal too narrow for even one column of text
             return "…"[:width]
-        if text.isascii():  # one cell per character, so slice it instead of walking it
-            body = text[self.offset : self.offset + budget]
-            if self.offset + budget < len(text):
-                return f"{head}{body[:-1]}…"  # trim one, to make room for the …
-            return f"{head}{body}"
 
         shown, used, skipped = [], 0, 0
         for char in text:
@@ -272,10 +268,10 @@ class Picker:
             if used + cells > budget:
                 while shown and used + 1 > budget:  # give back a cell for the trailing …
                     used -= get_cwidth(shown.pop())
-                return f"{head}{''.join(shown)}…"
+                return f"{lead}{''.join(shown)}…"
             shown.append(char)
             used += cells
-        return f"{head}{''.join(shown)}"
+        return f"{lead}{''.join(shown)}"
 
     def line(self, skill: Skill | None, group: list[Skill]) -> tuple[str, str]:
         """A row's full text and style, before panning."""
@@ -445,7 +441,7 @@ def main() -> int:
 
     relink(skills_dir, add, remove)
     # Counted off disk, not off `wanted`, which still holds the skills we had to skip.
-    print(f"\nDone: {len(Skill.linked(skills_dir))} linked. Review with `git status` and commit.")
+    print(f"\nDone: {len(Skill.linked(skills_dir))} linked.")
     return 0
 
 
