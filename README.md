@@ -21,6 +21,14 @@ cd llm-config
 git submodule update --init --recursive
 ```
 
+## Shared Agent Instructions
+
+Install shared `AGENTS.md` as Codex global instructions:
+
+```bash
+ln -s "$(pwd)/AGENTS.md" ~/.codex/AGENTS.md
+```
+
 ## Selecting Skills
 
 `skills/` is a flat directory of symlinks into the sources above, and is what every
