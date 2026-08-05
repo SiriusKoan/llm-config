@@ -40,9 +40,10 @@ SOURCE_ROOTS = {
     "mattpocock-skills": "mattpocock-skills/skills",
     "context-engineering-kit": "context-engineering-kit/plugins",
     "personal-skills": "personal-skills",
+    "i-have-adhd": "i-have-adhd/skills/i-have-adhd",
 }
 
-NESTED_SOURCES = {"mattpocock-skills", "context-engineering-kit"}
+NESTED_SOURCES = {"mattpocock-skills", "context-engineering-kit", "i-have-adhd"}
 
 HELP = (
     "↑↓ move · ←→ pan · space toggle · tab fold (shift-tab: all)"
