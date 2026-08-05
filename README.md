@@ -4,12 +4,14 @@ Collection of LLM resources, skills, and tools.
 
 ## Skill Sources
 
-Five submodules, plus one directory of hand-written skills:
+Submodules, plus one directory of hand-written skills:
 
 - `academic-research-skills`
 - `andrej-karpathy-skills`
 - `caveman`
 - `everything-claude-code`
+- `i-have-adhd`
+- `ponytail`
 - `superpowers`
 - `personal-skills` — not a submodule; own skills live here
 

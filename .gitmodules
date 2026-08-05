@@ -23,3 +23,6 @@
 [submodule "i-have-adhd"]
 	path = i-have-adhd
 	url = https://github.com/ayghri/i-have-adhd
+[submodule "ponytail"]
+	path = ponytail
+	url = https://github.com/DietrichGebert/ponytail.git

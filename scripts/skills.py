@@ -40,6 +40,7 @@ SOURCE_ROOTS = {
     "mattpocock-skills": "mattpocock-skills/skills",
     "context-engineering-kit": "context-engineering-kit/plugins",
     "personal-skills": "personal-skills",
+    "ponytail": "ponytail/skills",
     "i-have-adhd": "i-have-adhd/skills/i-have-adhd",
 }
 
