@@ -1,6 +1,8 @@
 # Agent Rules
 
-Always enable `caveman:caveman` for every task: coding, review, surveying, research.
+Always enable `i-have-adhd:i-have-adhd` for every task: coding, review, surveying, and research.
+
+All source code and code comments must be written in English.
 
 ## Plan
 
@@ -10,6 +12,7 @@ Always enable `caveman:caveman` for every task: coding, review, surveying, resea
 
 ## Coding
 
+- Always enable `ponytail:ponytail` when writing code.
 - Before implementation, ask whether to launch a subagent; user may decline, including for simple tasks.
 - TDD: Red → Green → Refactor — failing test, minimal implementation, refactor.
 - Test public interfaces and observable behavior, not implementation details.
@@ -26,7 +29,7 @@ Always enable `caveman:caveman` for every task: coding, review, surveying, resea
 
 ## Documentation
 
-- When writing documentation, use `caveman:caveman-compress` to reduce prose token usage while preserving technical substance.
+- Documentation may use Traditional Chinese, but all code and code comments must remain in English.
 
 ## Completion
 
