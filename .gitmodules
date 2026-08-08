@@ -26,3 +26,6 @@
 [submodule "ponytail"]
 	path = ponytail
 	url = https://github.com/DietrichGebert/ponytail.git
+[submodule "book-to-skill"]
+	path = book-to-skill
+	url = https://github.com/virgiliojr94/book-to-skill
