@@ -11,6 +11,7 @@ Submodules, plus one directory of hand-written skills:
 - `caveman`
 - `everything-claude-code`
 - `book-to-skill`
+- `localization-tw`
 - `i-have-adhd`
 - `ponytail`
 - `superpowers`

@@ -29,3 +29,6 @@
 [submodule "book-to-skill"]
 	path = book-to-skill
 	url = https://github.com/virgiliojr94/book-to-skill
+[submodule "localization-tw"]
+	path = localization-tw
+	url = https://github.com/Qmo37/localization-tw.git

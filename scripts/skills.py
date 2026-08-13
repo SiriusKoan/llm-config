@@ -34,6 +34,7 @@ from prompt_toolkit.utils import get_cwidth
 SOURCE_ROOTS = {
     "everything-claude-code": "everything-claude-code/skills",
     "book-to-skill": "book-to-skill",
+    "localization-tw": "localization-tw",
     "superpowers": "superpowers/skills",
     "caveman": "caveman/skills",
     "andrej-karpathy-skills": "andrej-karpathy-skills/skills",
@@ -45,7 +46,13 @@ SOURCE_ROOTS = {
     "i-have-adhd": "i-have-adhd/skills/i-have-adhd",
 }
 
-NESTED_SOURCES = {"book-to-skill", "mattpocock-skills", "context-engineering-kit", "i-have-adhd"}
+NESTED_SOURCES = {
+    "book-to-skill",
+    "localization-tw",
+    "mattpocock-skills",
+    "context-engineering-kit",
+    "i-have-adhd",
+}
 
 HELP = (
     "↑↓ move · ←→ pan · space toggle · tab fold (shift-tab: all)"
