@@ -32,3 +32,6 @@
 [submodule "localization-tw"]
 	path = localization-tw
 	url = https://github.com/Qmo37/localization-tw.git
+[submodule "book-skills"]
+	path = book-skills
+	url = https://github.com/SiriusKoan/book-skills.git
