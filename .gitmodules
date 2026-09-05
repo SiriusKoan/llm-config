@@ -35,3 +35,6 @@
 [submodule "book-skills"]
 	path = book-skills
 	url = https://github.com/SiriusKoan/book-skills.git
+[submodule "archify"]
+	path = archify
+	url = https://github.com/tt-a1i/archify

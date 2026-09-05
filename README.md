@@ -15,6 +15,7 @@ Submodules, plus one directory of hand-written skills:
 - `i-have-adhd`
 - `ponytail`
 - `superpowers`
+- `archify`
 - `personal-skills` — not a submodule; own skills live here
 
 ## Setup
