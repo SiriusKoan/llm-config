@@ -38,3 +38,6 @@
 [submodule "archify"]
 	path = archify
 	url = https://github.com/tt-a1i/archify
+[submodule "hallmark"]
+	path = hallmark
+	url = https://github.com/Nutlope/hallmark.git

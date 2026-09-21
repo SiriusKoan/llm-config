@@ -46,6 +46,7 @@ SOURCE_ROOTS = {
     "ponytail": "ponytail/skills",
     "i-have-adhd": "i-have-adhd/skills/i-have-adhd",
     "archify": "archify",
+    "hallmark": "hallmark/skills",
 }
 
 NESTED_SOURCES = {
