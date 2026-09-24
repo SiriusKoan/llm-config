@@ -41,3 +41,6 @@
 [submodule "hallmark"]
 	path = hallmark
 	url = https://github.com/Nutlope/hallmark.git
+[submodule "figures4papers"]
+	path = figures4papers
+	url = https://github.com/ChenLiu-1996/figures4papers

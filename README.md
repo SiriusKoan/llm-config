@@ -10,6 +10,7 @@ Submodules, plus one directory of hand-written skills:
 - `andrej-karpathy-skills`
 - `caveman`
 - `everything-claude-code`
+- `figures4papers`
 - `book-to-skill`
 - `localization-tw`
 - `i-have-adhd`

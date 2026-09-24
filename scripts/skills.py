@@ -33,6 +33,7 @@ from prompt_toolkit.utils import get_cwidth
 # translated copies (docs/ja-JP/skills, .cursor/, ...) inside some submodules.
 SOURCE_ROOTS = {
     "everything-claude-code": "everything-claude-code/skills",
+    "figures4papers": "figures4papers",
     "book-to-skill": "book-to-skill",
     "localization-tw": "localization-tw",
     "superpowers": "superpowers/skills",
