@@ -55,6 +55,12 @@ go in `personal-skills/<name>/SKILL.md`.
 # Claude (~/.claude)
 ln -s $(pwd)/cli/claude/{settings.json,skills,hooks} ~/.claude/
 
+# OMP (~/.omp/agent)
+omp config set skills.customDirectories '["~/.claude/skills"]'
+
+# Pi (~/.pi/agent)
+ln -s "$(pwd)/skills" ~/.pi/agent/skills
+
 # OpenCode (~/.config/opencode)
 ln -s $(pwd)/cli/opencode/opencode.json ~/.config/opencode/config.json
 ln -s $(pwd)/cli/opencode/skill ~/.config/opencode/
